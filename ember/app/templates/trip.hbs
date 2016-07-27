@@ -1,0 +1,9 @@
+<ul class="list-group">
+        {{#each model as |trip|}}
+                <li class="list-group-item">{{trip.trip_name}} {{trip.trip_id}}</li>
+                {{#each trip.stops as |stop|}}
+                	<li class="list-group-item">{{stop.stop_id}}</li>
+                	<li class="list-group-item">{{stop.stop_name}}</li>
+                {{/each}}
+        {{/each}}
+</ul>
