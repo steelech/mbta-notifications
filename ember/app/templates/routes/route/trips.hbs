@@ -1,7 +1,9 @@
+{{fa-icon "train"}}
+
 {{#trips-filter
         filter=(action 'filterByTrip')
         as |trips|}}
-        <div class="col-md-8">
+        <div class="col-md-6">
                 <ul class="list-group">
                     {{#each trips as |trip|}}
                         <li class="list-group-item">{{trip.trip_name}}</li>
