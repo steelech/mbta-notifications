@@ -11,11 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727003941) do
+ActiveRecord::Schema.define(version: 20160730223436) do
 
   create_table "routes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "route_id"
+    t.string   "route_name"
+    t.string   "direction_name"
+    t.string   "direction_id"
   end
 
   create_table "stops", force: :cascade do |t|
@@ -45,6 +49,9 @@ ActiveRecord::Schema.define(version: 20160727003941) do
     t.string   "trip_name"
     t.string   "direction_id"
     t.string   "direction_name"
+    t.integer  "route_id"
   end
+
+  add_index "trips", ["route_id"], name: "index_trips_on_route_id"
 
 end

@@ -11,6 +11,11 @@ Router.map(function() {
   this.route('search');
   // this.route('trip');
   this.route('trip');
+  this.route('routes', function() {
+    this.route('route', { path: ':id'}, function() {
+      this.route('trips');
+    });
+  });
 });
 
 export default Router;

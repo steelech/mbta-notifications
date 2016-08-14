@@ -1,25 +1,25 @@
 class RoutesController < ApplicationController
-
+	before_action :set_route, only: [:show, :update, :destroy]
 	def index
-		routes = MbtaService.get_routes(api_key: 'wX9NwuHnZU2ToO7GmGR9uw', route: 'CR-Kingston', max_time: 1440, format: 'json', max_trips: 100, direction: 1)
-		@my_routes = routes["direction"][0]["trip"].map do |trip|
-			@route = Route.new(stop_id: trip["trip_name"])
-		end
-		render json: @my_routes, each_serializer: RouteSerializer
+                         headers['Access-Control-Allow-Origin'] = '*'
+ 			if(params[:route_name])
+                                @routes = Route.where("route_name LIKE (?)", "%#{params[:route_name]}%")
+                        else
+                                @routes = Route.all
+                        end
 
-		# routes = File.read("tmp/search_results_example.json")
-		# routes = JSON.parse(routes)
-		# # puts routes
+                        render json: @routes, include: "trips"
 
-		# @my_routes = routes["direction"][0]["trip"].map do |trip|
-		# 	@route = Route.new(stop_id: trip["trip_name"])
-		# end
-		# @my_routes.each do |route|
-		# 	puts route.inspect
-		# end
-
-		# render json: @my_routes
 
 	end
+
+        def show
+        	render json: @route, include: 'trips'
+        end
+
+        private
+        	def set_route
+        		@route = Route.find(params[:id])
+        	end
 
 end

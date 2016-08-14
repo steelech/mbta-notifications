@@ -1,0 +1,17 @@
+{{#routes-filter
+        filter=(action 'filterByRoute')
+        as |routes|}}
+        <div class="col-md-8">
+                <ul class="list-group">
+                                {{#if routes}}
+                                {{#each routes as |route|}}
+                                        {{#route-select setDirection="changeRoute" value1=route.route_name value2=route.trips.length id=route.id}}
+                                        {{/route-select}}
+                                {{/each}}
+                            {{else}}
+                                <li class="list-group-item">Your search returned no results.</li>
+                        {{/if}}
+                </ul>
+        </div>
+{{/routes-filter}}
+

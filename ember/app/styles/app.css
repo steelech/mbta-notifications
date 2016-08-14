@@ -8,3 +8,61 @@
 	color: #555555;
 	background-color: #e7e7e7;
 }
+
+li:hover {
+	background-color: #D3D3D3;
+}
+
+
+.hidden {
+	visibility: hidden;
+}
+
+.get-route-button  {
+	/*float: right;*/
+        height: 37px;
+        display: inline-block;
+        width: 110px;
+}
+
+.direction-selector {
+	float:right;
+       	padding-right: 10px;
+        width: 120px;
+        display: inline-block;
+}
+
+li {
+	height: 50px;
+        font-size: 15px;
+}
+
+.route-selector:hover {
+	background-color: #D3D3D3;
+        font-size: 20px;
+}
+
+.route-info {
+	display: inline-block;
+}
+
+.route-selector:hover .directions {
+	font-size: 10px;
+        margin-left: 20px;
+        margin-top: 15px;
+
+}
+
+.routes-filter {
+	padding-bottom: 20px;
+}
+
+.trips {
+	float: right;
+        display: inline-block;
+}
+
+
+
+
+

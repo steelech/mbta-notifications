@@ -1,3 +1,4 @@
 class RouteSerializer < ActiveModel::Serializer
-  attributes :stop_id
+	has_many :trips
+  	attributes :route_name, :route_id
 end
