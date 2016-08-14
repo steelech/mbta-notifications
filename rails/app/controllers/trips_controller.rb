@@ -2,16 +2,31 @@ class TripsController < ApplicationController
 	  before_action :set_trip, only: [:show, :update, :destroy]
 	def index
         	headers['Access-Control-Allow-Origin'] = '*'
-                if(params[:direction])
-                        @trips = Trip.where("direction_id = ? AND route_id = ?", params[:direction], params[:route_id])
+
+
+
+                # Cases:
+                # User puts in ''--> filter by route_id and direction
+                # User types something in --> filter by route_id, direction, and trip_name
+
+                if(params[:trip_name])
+                        @trips = Trip.where("trip_name LIKE (?) AND direction_id = ? AND route_id = ?", "%#{params[:trip_name]}%", params[:direction], params[:route])
                         puts @trips
-                elsif(params[:trip_name])
-                        puts params[:route_id]
-                        puts params[:trip_name]
-                        @trips = Trip.where("trip_name LIKE (?) AND route_id = ?", "%#{params[:trip_name]}%", params[:route_id])
                 else
-                        @trips = Trip.all
+                        @trips = Trip.where("direction_id = ? AND route_id = ?", params[:direction], params[:route])
+
                 end
+                # if(params[:direction] && params[:trip_name])
+                #         puts params[:direction]
+                #         @trips = Trip.where("trip_name LIKE (?) AND direction_id = ? AND route_id = ?", "%#{params[:trip_name]}%", params[:direction], params[:route])
+                #         puts @trips
+                # elsif(params[:trip_name])
+                #         puts params[:route]
+                #         puts params[:trip_name]
+                #         @trips = Trip.where("trip_name LIKE (?) AND route_id = ?", "%#{params[:trip_name]}%", params[:route])
+                # else
+                #         @trips = Trip.all
+                # end
 
 
 		render json: @trips, include: 'stops'

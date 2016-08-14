@@ -6,38 +6,18 @@ export default Ember.Controller.extend({
         results: [],
         direction: '',
         actions: {
-                getTrips() {
-                        // console.log(this.get('model'));
-                },
                 filterByTrip(input, direction) {
-                        console.log("direction: ", this.get('direction'));
-                        console.log("route: ", this.get("route"));
-                        var trips;
-                        var tripsPromise = this.get('model').get('trips');
-                        tripsPromise.then(function(trips) {
-                           var tripArray = trips.map(function(record) {
-                               return record.toJSON();
-                             });
 
-                           trips = tripArray;
-                           return trips;
-                        }).then(function(results) {
-                          return results;
-                        });
+                        if(input == "")
+                        {
+                          return this.get('store').query("trip", { direction: this.get('direction'), route: this.get('route')});
 
-
-
-                        // console.log(this.get('results'));
-
-                        // var tripsPromise
-
-
-                        // return [];
-
-
-
-
-
+                        }
+                        else
+                        {
+                          // return this.get('store').findAll("trip");
+                          return this.get('store').query("trip", { direction: this.get('direction'), route: this.get('route'), trip_name: input });
+                        }
                 }
         }
 });
