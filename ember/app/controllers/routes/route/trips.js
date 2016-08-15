@@ -15,7 +15,6 @@ export default Ember.Controller.extend({
                         }
                         else
                         {
-                          // return this.get('store').findAll("trip");
                           return this.get('store').query("trip", { direction: this.get('direction'), route: this.get('route'), trip_name: input });
                         }
                 }

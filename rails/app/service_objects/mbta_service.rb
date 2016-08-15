@@ -1,5 +1,4 @@
 class MbtaService
-	include MBTA
 
 	attr_accessor :params, :results, :names
         API_KEY = 'wX9NwuHnZU2ToO7GmGR9uw'
