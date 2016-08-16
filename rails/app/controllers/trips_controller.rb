@@ -16,18 +16,6 @@ class TripsController < ApplicationController
                         @trips = Trip.where("direction_id = ? AND route_id = ?", params[:direction], params[:route])
 
                 end
-                # if(params[:direction] && params[:trip_name])
-                #         puts params[:direction]
-                #         @trips = Trip.where("trip_name LIKE (?) AND direction_id = ? AND route_id = ?", "%#{params[:trip_name]}%", params[:direction], params[:route])
-                #         puts @trips
-                # elsif(params[:trip_name])
-                #         puts params[:route]
-                #         puts params[:trip_name]
-                #         @trips = Trip.where("trip_name LIKE (?) AND route_id = ?", "%#{params[:trip_name]}%", params[:route])
-                # else
-                #         @trips = Trip.all
-                # end
-
 
 		render json: @trips, include: 'stops'
 	end

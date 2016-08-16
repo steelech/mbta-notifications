@@ -59,8 +59,25 @@ li {
 
 .trips {
 	float: right;
-        display: inline-block;
+    display: inline-block;
 }
+
+.trip-select {
+	display: inline-flex;
+	width: 100%;
+}
+
+.trip-select:hover {
+		background-color: #D3D3D3;
+	    /*font-size: 20px;*/
+}
+
+.trip-select-button {
+	float:right;
+	padding-right: 20px;
+	padding-left: 250px;
+}
+
 
 
 
