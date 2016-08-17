@@ -1,3 +1,6 @@
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 .page-header a h1 {
 	color: #555;
 }
@@ -91,6 +94,19 @@ li {
 	float:right;
 	margin-right: 0px;
 	padding-left: 260px;
+}
+
+.ember-modal-dialog {
+	width: 300px;
+	height: 200px;
+}
+
+.subscribe-button {
+	display: inline-flex;
+}
+
+.btn .btn-sm .tooltipped .subscribe-container {
+	color: red;
 }
 
 

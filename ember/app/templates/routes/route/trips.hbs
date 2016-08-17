@@ -1,3 +1,10 @@
+
+
+{{#if showModalDialog}}
+	{{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
+		<a class="btn btn-big">Go</a>
+	{{/modal-dialog}}
+{{/if}}
 <div class="row">
 
 	{{#trips-filter
@@ -16,3 +23,5 @@
 		{{trip-schedule stops=stops}}
 	{{/if}}
 </div>
+
+

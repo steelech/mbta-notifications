@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
         queryParams: ['direction'],
         trip_id: '',
+        showModalDialog: true,
         route: '',
         results: [],
         direction: '',
@@ -26,6 +27,9 @@ export default Ember.Controller.extend({
                     this.set('trip_id', trip_id);
                     this.set('showSchedule', true);
                     this.set('stops', this.get('store').query('stop', { trip_id: trip_id }));
-                },         
+                },    
+                closeModalDialog() {
+                    this.set("showModalDialog", false);
+                }     
         }
 });
