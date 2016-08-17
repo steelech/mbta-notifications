@@ -14,6 +14,8 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 
 gem 'json'
 
+gem 'twilio-ruby'
+
 
 
 # To use ActiveModel has_secure_password

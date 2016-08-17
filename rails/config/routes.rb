@@ -2,9 +2,13 @@ Rails.application.routes.draw do
   resources :trains, except: [:new, :edit]
   resources :trips, except: [:new, :edit]
   resources :routes, except: [:new, :edit]
+  resources :subscriptions
   get 'mbta_request', to: 'routes#index'
   get 'searches', to: 'search#index'
   get 'stops', to: 'stops#index'
+
+
+  
   # get 'trips', to: 'trip#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
