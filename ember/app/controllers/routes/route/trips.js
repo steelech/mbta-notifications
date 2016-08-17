@@ -3,12 +3,13 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
         queryParams: ['direction'],
         trip_id: '',
-        showModalDialog: true,
+        showModalDialog: false,
         route: '',
         results: [],
         direction: '',
         showSchedule: false,
         stops: [],
+        ajax: Ember.inject.service(),
         actions: {
                 filterByTrip(input, direction) {
 
@@ -30,6 +31,18 @@ export default Ember.Controller.extend({
                 },    
                 closeModalDialog() {
                     this.set("showModalDialog", false);
-                }     
+                },
+                openModalDialog() {
+                    this.set("showModalDialog", true);
+                },
+                subscribe() {
+                    console.log("hi");
+                    var response = this.get('ajax').request('http://localhost:3000/subscriptions', {
+                        method: 'POST',
+                        data: {
+                            foo: 'bar'
+                        },
+                    })
+                }   
         }
 });

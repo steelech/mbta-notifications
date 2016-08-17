@@ -1,12 +1,13 @@
-
-
 {{#if showModalDialog}}
 	{{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
-		<a class="btn btn-big">Go</a>
+		<div class="middle">hi</div>
+		<div class="subscribe-modal-button">
+			<a class="btn btn-big" {{action "subscribe"}}>Go</a>
+		</div>
+		
 	{{/modal-dialog}}
 {{/if}}
 <div class="row">
-
 	{{#trips-filter
 	        filter=(action 'filterByTrip')
 	        as |trips|}}
@@ -20,7 +21,7 @@
 	        </div>
 	{{/trips-filter}}
 	{{#if showSchedule}}
-		{{trip-schedule stops=stops}}
+		{{trip-schedule stops=stops openModalDialog="openModalDialog"}}
 	{{/if}}
 </div>
 
