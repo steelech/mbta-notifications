@@ -1,11 +1,18 @@
-{{#trips-filter
-        filter=(action 'filterByTrip')
-        as |trips|}}
-        <div class="col-md-6">
-                <ul class="list-group">
-                    {{#each trips as |trip|}}
-                        {{trip-select trip_name=trip.trip_name}}
-                    {{/each}}
-                </ul>
-        </div>
-{{/trips-filter}}
+<div class="row">
+
+	{{#trips-filter
+	        filter=(action 'filterByTrip')
+	        as |trips|}}
+	        <div class="col-md-6">
+	                <ul class="list-group">
+	                    {{#each trips as |trip|}}
+	                        {{#trip-select setTrip="pickTrip" trip_name=trip.trip_name id=trip.id}}
+	                        {{/trip-select}}
+	                    {{/each}}
+	                </ul>
+	        </div>
+	{{/trips-filter}}
+	{{#if showSchedule}}
+		{{trip-schedule stops=stops}}
+	{{/if}}
+</div>

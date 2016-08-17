@@ -24,9 +24,6 @@ class MbtaService
                 route = Route.create({:route_name => @results['route_name'], :route_id => @results['route_id']})
                 route.parse_trips(@results)
             end
-
-
-
 	end
 
         def get_route_names(api_key: API_KEY)
@@ -35,17 +32,17 @@ class MbtaService
         		:format => 'json'
         	}
 
-                uri = URI('http://realtime.mbta.com/developer/api/v2/routes?')
-                uri.query = URI.encode_www_form(@params)
-                res = Net::HTTP.get_response(uri)
-                @results = JSON.parse(res.body)
-                @results["mode"].each do |result|
-                	if result["mode_name"] == "Commuter Rail"
-                        	@names = result["route"].map do |route|
-                                	route["route_id"]
-                                end
-                        end
+            uri = URI('http://realtime.mbta.com/developer/api/v2/routes?')
+            uri.query = URI.encode_www_form(@params)
+            res = Net::HTTP.get_response(uri)
+            @results = JSON.parse(res.body)
+            @results["mode"].each do |result|
+            	if result["mode_name"] == "Commuter Rail"
+                	@names = result["route"].map do |route|
+                    	route["route_id"]
+                    end
                 end
+            end
         end
 
         def self.get_schedule

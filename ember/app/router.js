@@ -6,14 +6,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('lines');
-  this.route('trains');
-  this.route('search');
-  // this.route('trip');
-  this.route('trip');
+
   this.route('routes', function() {
-    this.route('route', { path: ':id'}, function() {
-      this.route('trips');
+    this.route('route', { path: ':route_id'}, function() {
+      this.route('trips', function() {
+        this.route('trip', { path: ':trip_id'}, function() {
+          
+        })
+      });
     });
   });
 });

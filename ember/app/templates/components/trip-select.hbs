@@ -1,7 +1,7 @@
 <div class="list-group-item trip-select" onmouseover={{action "over"}} onmouseout={{action "off"}}>
 	<div>{{trip_name}}</div>
 	<div class="trip-select-button">
-		<a class={{buttonClass}}>
+		<a class={{buttonClass}} {{action "setTrip" id}}>
 			{{fa-icon "train"}}
 		</a>
 	</div>

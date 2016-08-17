@@ -78,6 +78,20 @@ li {
 	padding-left: 250px;
 }
 
+.trip-schedule {
+	display:inline-flex;
+}
+
+.stop-name {
+	width: 200px;
+
+}
+
+.stop-time {
+	float:right;
+	margin-right: 0px;
+	padding-left: 260px;
+}
 
 
 

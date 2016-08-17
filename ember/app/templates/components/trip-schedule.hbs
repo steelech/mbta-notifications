@@ -1,0 +1,10 @@
+<div class="col-md-6">
+	{{#each stops as |stop|}}
+		<div class="list-group-item">
+			<div class="trip-schedule">
+				<div class="stop-name">{{stop.stop_name}}</div>
+				<div class="stop-time pull-right">{{stop.stop_time}}</div>
+			</div>
+		</div>
+	{{/each}}
+</div>
