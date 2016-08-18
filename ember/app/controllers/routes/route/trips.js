@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
         direction: '',
         showSchedule: false,
         stops: [],
+        phoneNumber: '',
         ajax: Ember.inject.service(),
         actions: {
                 filterByTrip(input, direction) {
@@ -23,8 +24,6 @@ export default Ember.Controller.extend({
                     }
                 },
                 pickTrip(trip_name, trip_id) {
-                    console.log("trip_name: ", trip_name);
-                    console.log('trip_id: ', trip_id);
                     this.set('trip_id', trip_id);
                     this.set('showSchedule', true);
                     this.set('stops', this.get('store').query('stop', { trip_id: trip_id }));
@@ -36,13 +35,21 @@ export default Ember.Controller.extend({
                     this.set("showModalDialog", true);
                 },
                 subscribe() {
-                    console.log("hi");
                     var response = this.get('ajax').request('http://localhost:3000/subscriptions', {
                         method: 'POST',
                         data: {
-                            foo: 'bar'
+                            direction: this.get('direction'),
+                            trip_id: this.get('trip_id'),
+                            route: this.get('route'),
+                            phone_number: this.get('phoneNumber')
                         },
-                    })
+                    });
+                    this.set("showModalDialog", false);
+                },
+                setPhoneNumber(value) {
+                    console.log("setting phone number", value);
+                    this.set('phoneNumber', value);
+
                 }   
         }
 });

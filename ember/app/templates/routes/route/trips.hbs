@@ -1,8 +1,9 @@
 {{#if showModalDialog}}
 	{{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
-		<div class="middle">hi</div>
+		<div class="middle">Subscribe to notifications for this trip</div>
+		{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
 		<div class="subscribe-modal-button">
-			<a class="btn btn-big" {{action "subscribe"}}>Go</a>
+			<a class="btn btn-default" {{action "subscribe"}}>Go</a>
 		</div>
 		
 	{{/modal-dialog}}
