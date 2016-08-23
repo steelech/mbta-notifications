@@ -16,6 +16,12 @@ gem 'json'
 
 gem 'twilio-ruby'
 
+# gem 'delayed_job'
+gem 'delayed_job_active_record'
+# gem 'delayed_job_groups_plugin'
+# gem 'delayed_job_heartbeat_plugin'
+# gem 'delayed_job_worker_pool'
+
 
 
 # To use ActiveModel has_secure_password

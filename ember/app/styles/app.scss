@@ -76,9 +76,7 @@ li {
 }
 
 .trip-select-button {
-	float:right;
-	padding-right: 20px;
-	padding-left: 250px;
+	padding-left: 75%;
 }
 
 .trip-schedule {
@@ -105,37 +103,56 @@ li {
 	display: inline-flex;
 }
 
-.btn .btn-sm .tooltipped .subscribe-container {
-	color: red;
-}
 
-.subscription-modal-container {
+.modal-dialog-container {
 	display: inline-block;
+	width: 275px;
+	height: 195px;
 }
 
-.middle {
+.subscribe-text {
 	text-align: center;
 	padding-bottom: 50px;
 }
 
 .subscribe-modal-button {
-	justify-content: center;
-	padding-top: 50px;
+	height: 75px;
+	padding-right: 60px;
+	padding-left: 90px;
+	padding-top: 22.5px;
 }
 
 
-.subscribe-container {
-	/*padding-left: 200px;*/
+.routes-container {
+	padding-left: 25%;
+	padding-right: 25%
 }
 
 
+.routes-input {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
 
+.routes-header {
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 5%;
+}
 
+.trips-input {
+	width: 25%;
+	margin-left: 12.5%;
+}
 
+.trip-location {
+	margin-left: 12.5%;
+}
 
-
-
-
+.trips-header {
+	margin-left: 20%;
+}
 
 
 
