@@ -11,21 +11,23 @@
 	{{/modal-dialog}}
 {{/if}}
 <div class="row trip">
+	<div class="col-md-6">
 	<h1 class="trips-header">Trips</h1>
-	{{#trips-filter
-	        filter=(action 'filterByTrip')
-	        as |trips|}}
-	        <div class="col-md-6">
-	                <ul class="list-group">
-	                    {{#each trips as |trip|}}
-	                        {{#trip-select setTrip="pickTrip" trip_name=trip.trip_name id=trip.id}}
-	                        {{/trip-select}}
-	                    {{/each}}
-	                </ul>
-	        </div>
-	{{/trips-filter}}
+		{{#trips-filter
+		        filter=(action 'filterByTrip')
+		        as |trips|}}
+		        <div class="col-md-17">
+		                <ul class="list-group">
+		                    {{#each trips as |trip|}}
+		                        {{#trip-select setTrip="pickTrip" trip_name=trip.trip_name id=trip.id}}
+		                        {{/trip-select}}
+		                    {{/each}}
+		                </ul>
+		        </div>
+		{{/trips-filter}}
+	</div>
 	{{#if showSchedule}}
-		{{trip-schedule stops=stops openModalDialog="openModalDialog"}}
+		{{trip-schedule stops=stops trip_name=trip_name openModalDialog="openModalDialog"}}
 	{{else}}
 		<div>Pick a trip</div>
 	{{/if}}

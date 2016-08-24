@@ -81,7 +81,7 @@ STOP_NAMES = [
 ]
 
 STOP_TIMES = [
-	"at 05:50PM",
+	"at 5:50PM",
 	"at 5:58PM",
 	"at 6:01PM",
 	"at 6:03PM",
@@ -112,7 +112,7 @@ namespace :fake do
 		(0..3).each do |route_index|
 			(0..7).each do |trip_index| 
 				Route.all[route_index].trips.create({ trip_id: TRIP_IDS[trip_index], 
-								 					  trip_name: TRIP_NAMES[trip_index], 
+								 					  trip_name: format_trip_name(TRIP_NAMES[trip_index]), 
 								 					  direction_id: DIRECTION_IDS[trip_index],
 								 					  direction_name: DIRECTION_NAMES[trip_index] })
 			end
@@ -130,6 +130,22 @@ namespace :fake do
 
 	end
 end
+
+def format_trip_name(trip_name)
+    trip_name.split("(")[1].split(")")[0]
+
+end
+
+ # def format_stop_time(stop_time)
+ #                # stop_time
+ #                # puts 
+ #                puts stop_time
+ #                stop_time = Time.at(stop_time.to_i).strftime("%I:%M%p").to_s
+ #                if stop_time[0] == "0"
+ #                        stop_time[0] = ""
+ #                end
+ #                "at #{stop_time}"
+ #        end
 
 
 

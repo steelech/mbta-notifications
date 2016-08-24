@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
         queryParams: ['direction'],
         trip_id: '',
+        trip_name: '',
         showModalDialog: false,
         route: '',
         results: [],
@@ -25,6 +26,7 @@ export default Ember.Controller.extend({
                 },
                 pickTrip(trip_name, trip_id) {
                     this.set('trip_id', trip_id);
+                    this.set('trip_name', trip_name);
                     this.set('showSchedule', true);
                     this.set('stops', this.get('store').query('stop', { trip_id: trip_id }));
                 },    

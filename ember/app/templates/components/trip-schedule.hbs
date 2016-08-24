@@ -1,6 +1,7 @@
 <div class="col-md-6">
+	<h1 class="trip-name-header">{{trip_name}}</h1>
 	{{#each stops as |stop|}}
-		<div class="list-group-item">
+		<div class="list-group-item stop">
 			<div class="trip-schedule">
 				<div class="stop-name">{{stop.stop_name}}</div>
 				<div class="stop-time pull-right">{{stop.stop_time}}</div>

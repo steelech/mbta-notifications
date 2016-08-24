@@ -36,7 +36,6 @@ li:hover {
 }
 
 li {
-	height: 50px;
         font-size: 15px;
 }
 
@@ -66,17 +65,15 @@ li {
 }
 
 .trip-select {
-	display: inline-flex;
-	width: 100%;
+	width: 450px;
 }
 
 .trip-select:hover {
 		background-color: #D3D3D3;
-	    /*font-size: 20px;*/
 }
 
 .trip-select-button {
-	padding-left: 75%;
+	padding-left: 230px;
 }
 
 .trip-schedule {
@@ -84,14 +81,12 @@ li {
 }
 
 .stop-name {
-	width: 200px;
+	width: 800px;
 
 }
 
 .stop-time {
-	float:right;
-	margin-right: 0px;
-	padding-left: 260px;
+	width: 100%;
 }
 
 .ember-modal-dialog {
@@ -142,17 +137,58 @@ li {
 }
 
 .trips-input {
-	width: 25%;
-	margin-left: 12.5%;
+	width: 170px;
+	margin-left: 147px;
 }
 
 .trip-location {
-	margin-left: 12.5%;
+	margin-left: 155px;
 }
 
 .trips-header {
-	margin-left: 20%;
+	margin-left: 193px;
 }
+
+.stop {
+	width: 500px;
+
+}
+
+.trip-name {
+}
+
+.other-container {
+	display: inline-flex;
+}
+
+.btn-primary {
+	margin-bottom: 0px;
+}
+
+.trip-name-header {
+	width: 100%;
+	text-align: -webkit-center;
+}
+
+.btn {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.subscribe-container {
+	margin-left: 30%;
+	width: 200px;
+}
+
+.subscribe {
+	margin-right: 5px;
+}
+
+.btn-default.subscribe-container {
+	background-color: purple;
+}
+
+
 
 
 

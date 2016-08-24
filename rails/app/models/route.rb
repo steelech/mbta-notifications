@@ -7,7 +7,7 @@ class Route < ActiveRecord::Base
                 direction_name = direction["direction_name"]
         		direction["trip"].each do |trip|
                     if not before_now?(trip)
-                        this_trip = Trip.create({:trip_name => trip["trip_name"], 
+                        this_trip = Trip.create({:trip_name => format_trip_name(trip["trip_name"]), 
                                                  :trip_id => trip["trip_id"],
                                                  :direction_id => direction_id, 
                                                  :direction_name => direction_name})
@@ -21,5 +21,10 @@ class Route < ActiveRecord::Base
         def before_now?(trip)
             puts trip["trip_name"].split("(")[1]
             Time.parse(trip["trip_name"].split("(")[1].split(" f")[0]) < Time.now
+        end
+
+        def format_trip_name(trip_name)
+            trip_name.split("(")[1].split(")")[0]
+
         end
 end
