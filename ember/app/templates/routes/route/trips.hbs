@@ -26,11 +26,8 @@
 		        </div>
 		{{/trips-filter}}
 	</div>
-	{{#if showSchedule}}
-		{{trip-schedule stops=stops trip_name=trip_name openModalDialog="openModalDialog"}}
-	{{else}}
-		<div>Pick a trip</div>
-	{{/if}}
+	{{trip-schedule stops=stops trip_name=trip_name showSchedule=showSchedule openModalDialog="openModalDialog"}}
 </div>
+
 
 
