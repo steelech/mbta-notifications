@@ -5,12 +5,12 @@ export default Ember.Controller.extend({
 	showSubscriptionsList: false,
 	phoneNumber: '',
 	ajax: Ember.inject.service(),
+	showModalDialog: false,
 	actions: {
 		setPhoneNumber(value) {
 		    this.set('phoneNumber', value);
 		},
 		getSubscriptionsList() {
-			// var subscriptions = this.get('store').query('subscription', { phone_number: this.get('phoneNumber') });
 			this.set('subscriptions', this.get('store').query('subscription', { phone_number: this.get('phoneNumber') }));
 			this.set("showSubscriptionsList", true);
 		}  

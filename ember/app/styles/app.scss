@@ -273,8 +273,44 @@ li {
 	margin-top: 40px;
 }
 
+.subscription-select-container {
+	display: inline-flex;
+	width: 100%;
+	
+}
 
+.subscription-trip-name {
+	width: 100%;
+	
+}
 
+.subscription-buttons {
+	display: inline-flex;
+	hidden: true;
+}
+
+.subscription-delete-button {
+	padding-left: 10px;
+	
+}
+
+.subscription-view-button {
+	
+}
+
+.fa-train {
+	color: lightgrey;
+	&:hover {
+		color: darkgrey;
+	}
+}
+
+.fa-trash {
+	color: lightgrey;
+	&:hover {
+		color: darkgrey;
+	}
+}
 
 
 

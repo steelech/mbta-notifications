@@ -10,8 +10,13 @@ class SubscriptionsController < ApplicationController
 		direction = params[:direction]
 		trip_id = params[:trip_id]
 		route_id = params[:route]
+		trip_name = params[:trip_name]
 		phone_number = params[:phone_number]
-		Subscription.create({ direction_id: direction, trip_id: trip_id, route_id: route_id, phone_number: phone_number })
+		Subscription.create({ direction_id: direction, 
+							  trip_id: trip_id, 
+							  route_id: route_id, 
+							  phone_number: phone_number,
+							  trip_name: trip_name })
 		# TwilioClient.new.send_message("direction_id: #{direction}, trip_id: #{trip_id}, route_id: #{route_id}")
 		render json: {}
 	end

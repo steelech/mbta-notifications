@@ -43,7 +43,8 @@ export default Ember.Controller.extend({
                             direction: this.get('direction'),
                             trip_id: this.get('trip_id'),
                             route: this.get('route'),
-                            phone_number: this.get('phoneNumber')
+                            phone_number: this.get('phoneNumber'),
+                            trip_name: this.get('trip_name')
                         },
                     });
                     this.set("showModalDialog", false);

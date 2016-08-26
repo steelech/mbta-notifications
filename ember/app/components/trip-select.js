@@ -6,7 +6,6 @@ export default Ember.Component.extend({
 	id: '',
 	buttonClasses: "btn btn-primary",
 	buttonClass: "hidden",
-	// buttonClass: "btn btn-primary",
 	overListElement: false,
 	disabled: false,
 	actions: {

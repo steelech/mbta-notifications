@@ -17,5 +17,12 @@
 	{{/subscriptions-list}}
 {{/if}}
 
-{{!-- {{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}} --}}
-{{!-- {{trip-schedule stops=stops trip_name=trip_name showSchedule=showSchedule openModalDialog="openModalDialog"}} --}}
+{{#if showViewDialog}}
+	{{#modal-dialog translucentOverlay=true}}
+	{{/modal-dialog}}
+{{/if}}
+
+{{#if showDeleteDialog}}
+	{{#modal-dialog translucentOverlay=true}}
+	{{/modal-dialog}}
+{{/if}}

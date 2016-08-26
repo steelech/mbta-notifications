@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160820203014) do
+ActiveRecord::Schema.define(version: 20160826213420) do
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160820203014) do
     t.string   "trip_id"
     t.string   "route_id"
     t.string   "phone_number"
+    t.string   "trip_name"
   end
 
   create_table "trains", force: :cascade do |t|
