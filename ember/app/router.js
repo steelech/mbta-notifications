@@ -6,7 +6,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-
   this.route('routes', function() {
     this.route('route', { path: ':route_id'}, function() {
       this.route('trips', function() {
@@ -16,6 +15,10 @@ Router.map(function() {
       });
     });
   });
+  this.route('about');
+  this.route('help');
+  this.route('home');
+  this.route('notifications');
 });
 
 export default Router;

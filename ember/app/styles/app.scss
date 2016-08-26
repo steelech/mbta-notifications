@@ -73,7 +73,7 @@ li {
 }
 
 .trip-select-button {
-	padding-left: 230px;
+	padding-left: 225px;
 }
 
 .trip-schedule {
@@ -200,19 +200,78 @@ li {
 	padding-top: 15px;
 	
 }
-
-
 .stop-name-header {
 	padding-left: 60px;
 	padding-top: 50px;
 }
 
+.about-header {
+	text-align: center;
+}
 
+.header {
+	padding-bottom: 10px;
+	margin-top: 30px;
+}
 
+.page-nav {
+	width: 100%;
+	display: inline-flex;
+	padding-top: 2%;
+}
 
+.navbar {
+	min-height: 40px;
+}
 
+.trips-container {
+	padding-left: 80px;
+}
 
+.left-nav {
+	padding-left: 20px;
+	width: 320%;
+	display: inline-flex;
 
+	a {
+	padding-right: 20px;
+	}
+}
+
+.right-nav {
+	margin-left: 25%;
+	width: 100%;
+	display: inline-flex;
+	a {
+		padding-right: 15px;
+	}
+}
+
+.phone-number-search {
+	width: 210px;
+}
+
+.subscription-prompt {
+	text-align: center;
+}
+
+.phone-number-submit {
+	display: inline-flex;
+	margin-left: 39%;
+	margin-top: 5%;
+}
+
+.subscriptions-list-header {
+	text-align: center;
+}
+
+.subscriptions-list-content {
+	margin-left: 27%;
+}
+
+.subscriptions-list {
+	margin-top: 40px;
+}
 
 
 

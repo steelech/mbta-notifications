@@ -1,6 +1,8 @@
 class SubscriptionsController < ApplicationController
 	def index
 		headers['Access-Control-Allow-Origin'] = '*'
+		subscriptions = Subscription.where("phone_number = ?", params[:phone_number])
+		render json: subscriptions
 	end
 
 	def create

@@ -1,0 +1,12 @@
+<div class="subscriptions-list">
+	<div class="subscriptions-list-header">
+		<h1>Subscriptions:</h1>
+	</div>
+	<div class="subscriptions-list-content list-group col-md-6">
+		{{#each subscriptions as |subscription|}}				<div class=" list-group-item">
+				{{subscription.direction_id}}
+			</div>
+		{{/each}}
+	</div>
+</div>
+

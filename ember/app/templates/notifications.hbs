@@ -1,0 +1,21 @@
+<h1 class="about-header">Notifications</h1>
+<div class="col-md-18">
+	<div class="subscription-prompt">
+		<i>Enter the phone number used when subscribing to a trip</i>
+	</div>
+	<div class="phone-number-submit">
+		<div class="phone-number-search">
+			{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
+		</div>
+		<div class="phone-number-button">
+			<a class="btn btn-default" {{action "getSubscriptionsList"}}>Go</a>
+		</div>
+	</div>
+</div>
+{{#if showSubscriptionsList}}
+	{{#subscriptions-list subscriptions=subscriptions}}
+	{{/subscriptions-list}}
+{{/if}}
+
+{{!-- {{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}} --}}
+{{!-- {{trip-schedule stops=stops trip_name=trip_name showSchedule=showSchedule openModalDialog="openModalDialog"}} --}}
