@@ -16,10 +16,7 @@ export default Ember.Component.extend({
 			this.set("buttonClass", "hidden");
 		},
 		setTrip: function(param) {
-			
 			this.sendAction("setTrip", this.get('trip_name'), this.get('id'));
-
 		}
 	}
-
 });
