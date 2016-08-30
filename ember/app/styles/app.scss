@@ -90,8 +90,9 @@ li {
 }
 
 .ember-modal-dialog {
-	width: 300px;
-	height: 200px;
+	width: 400px;
+	height: 300px;
+	overflow: scroll;
 }
 
 .subscribe-button {
@@ -103,6 +104,7 @@ li {
 	display: inline-block;
 	width: 275px;
 	height: 195px;
+	margin-left: 15%;
 }
 
 .subscribe-text {
@@ -312,6 +314,35 @@ li {
 	}
 }
 
+.deleteModalDialog {
+	
+}
+
+.subscription-trip-name {
+}
+
+.subscription-delete {
+	text-align: center;
+	display: inline-block;
+}
+
+.subscription-delete-confirmation-text {
+	margin-top: 15%;
+}
+
+.subscription-delete-buttons {
+	display: inline-flex;
+	margin-top: 15%;
+}
+
+.subscription-delete-confirmation-button {
+	.fa-trash {
+		color: lightgrey;
+		&:hover {
+			color: lightgrey;
+		}
+	}
+}
 
 
 

@@ -4,10 +4,10 @@
  			{{trip_name}}
  		</div>
  		<div class="subscription-buttons">
- 			<div class={{viewButtonClass}} onclick={{action "openViewDialog"}}>
+ 			<div class={{viewButtonClass}} onclick={{action "showViewDialog" trip_id trip_name}}>
  				{{fa-icon "train"}}
  			</div>
- 			<div class={{deleteButtonClass}} onclick={{action "openDeleteDialog"}}>
+ 			<div class={{deleteButtonClass}} onclick={{action "showDeleteDialog" trip_id trip_name subscription_id}}>
  				{{fa-icon "trash"}}
  			</div>
  		</div>

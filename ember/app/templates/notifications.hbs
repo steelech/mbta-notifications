@@ -13,16 +13,38 @@
 	</div>
 </div>
 {{#if showSubscriptionsList}}
-	{{#subscriptions-list subscriptions=subscriptions}}
+	{{#subscriptions-list subscriptions=subscriptions showViewDialog="showViewDialog" showDeleteDialog="showDeleteDialog"}}
 	{{/subscriptions-list}}
 {{/if}}
 
-{{#if showViewDialog}}
-	{{#modal-dialog translucentOverlay=true}}
+{{#if viewDialog}}
+	{{#modal-dialog translucentOverlay=true close="closeViewDialog"}}
+		<h1 class="subscription-trip-name">{{trip_name}}</h1>
+		{{#subscription-schedule stops=stops getStops="getStops"}}
+		{{/subscription-schedule}}
 	{{/modal-dialog}}
 {{/if}}
 
-{{#if showDeleteDialog}}
-	{{#modal-dialog translucentOverlay=true}}
+{{#if deleteDialog}}
+	{{#modal-dialog translucentOverlay=true classes="deleteModalDialog" close="closeDeleteDialog"}}
+		<div class="subscription-delete">
+			<div class="subscription-delete-header">
+				<h2>Delete subscription for:</h2>
+			</div>
+			<div class="subscription-delete-trip-name">
+				<b>{{trip_name}}</b>
+			</div>
+			<div class="subscription-delete-confirmation-text">
+				<i>Are you sure you would like to unsubscribe from notifications for this trip?</i>
+			</div>
+			<div class="subscription-delete-buttons">
+				<div class="subscription-delete-cancel-button">
+					<div class="btn btn-default" {{action "closeDeleteDialog"}}>Cancel {{fa-icon "trash"}}</div>
+				</div>
+				<div class="subscription-delete-confirmation-button">
+					<div class="btn btn-default" {{action "deleteSubscription"}}>Delete {{fa-icon "trash"}} </div>
+				</div>
+			</div>
+		</div>
 	{{/modal-dialog}}
 {{/if}}

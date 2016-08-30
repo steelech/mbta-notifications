@@ -19,17 +19,14 @@ export default Ember.Component.extend({
 			this.set("viewButtonClass", "hidden");
 			this.set("deleteButtonClass", "hidden");
 		},
-		openViewDialog() {
-			console.log("opening view dialog");
-			this.set("showViewDialog", true);
-		},
-
-		openDeleteDialog() {
-			console.log("opening delete dialog");
-			this.set("showDeleteDialog", true);
-		},
 		filterSubscriptions() {
 
+		},
+		showViewDialog(trip_id, trip_name) {
+			this.sendAction("showViewDialog", trip_id, trip_name);
+		},
+		showDeleteDialog(trip_id, trip_name, subscripttion_id) {
+			this.sendAction("showDeleteDialog", trip_id, trip_name, subscripttion_id);
 		}
 	}
 });

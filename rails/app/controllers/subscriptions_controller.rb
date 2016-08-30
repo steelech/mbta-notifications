@@ -20,4 +20,17 @@ class SubscriptionsController < ApplicationController
 		# TwilioClient.new.send_message("direction_id: #{direction}, trip_id: #{trip_id}, route_id: #{route_id}")
 		render json: {}
 	end
+
+	def destroy 
+		headers['Access-Control-Allow-Origin'] = '*'
+		puts "suh dude"
+		render json: {}
+	end
+
+	def show
+		headers['Access-Control-Allow-Origin'] = '*'
+		subscription = Subscription.find(params[:id])
+		Subscription.delete(params[:id])
+		render json: subscription
+	end
 end

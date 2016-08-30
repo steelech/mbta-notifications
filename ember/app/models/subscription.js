@@ -5,5 +5,6 @@ export default DS.Model.extend({
 	updated_at: DS.attr(),
 	direction_id: DS.attr(),
 	phone_number: DS.attr(),
-	trip_name: DS.attr()
+	trip_name: DS.attr(),
+	trip_id: DS.attr()
 });

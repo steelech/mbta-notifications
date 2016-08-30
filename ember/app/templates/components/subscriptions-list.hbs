@@ -4,7 +4,7 @@
 	</div>
 	<div class="subscriptions-list-content list-group col-md-6">
 		{{#each subscriptions as |subscription|}}			
-			{{#subscription-select trip_name=subscription.trip_name}}
+			{{#subscription-select trip_name=subscription.trip_name trip_id=subscription.trip_id subscription_id=subscription.id showViewDialog="showViewDialog" showDeleteDialog="showDeleteDialog" }}
 			{{/subscription-select}}
 		{{/each}}
 	</div>

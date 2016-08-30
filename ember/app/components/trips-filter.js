@@ -12,7 +12,7 @@ export default Ember.Component.extend({
 	 	handleFilterEntry() {
 	 		let filterInputValue = this.get('value');
 	 		let filterAction = this.get('filter');
-                        let filterDirection = this.get('direction');
+            let filterDirection = this.get('direction');
 	 		filterAction(filterInputValue, filterDirection).then((filterResults) => this.set('results', filterResults));
 	 	}
 	 }
