@@ -1,8 +1,5 @@
 <h1 class="about-header">Notifications</h1>
 <div class="col-md-18">
-	<div class="subscription-prompt">
-		<i>Enter the phone number used when subscribing to a trip</i>
-	</div>
 	<div class="phone-number-submit">
 		<div class="phone-number-search">
 			{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
@@ -13,8 +10,12 @@
 	</div>
 </div>
 {{#if showSubscriptionsList}}
-	{{#subscriptions-list subscriptions=subscriptions showViewDialog="showViewDialog" showDeleteDialog="showDeleteDialog"}}
+	{{#subscriptions-list subscriptions=subscriptions phone_number=subscriptionPhoneNumber showViewDialog="showViewDialog" showDeleteDialog="showDeleteDialog"}}
 	{{/subscriptions-list}}
+{{else}}
+	<div class="subscription-prompt">
+		<i>Enter the phone number used for the notification subscription</i>
+	</div>
 {{/if}}
 
 {{#if viewDialog}}

@@ -14,12 +14,14 @@ export default Ember.Controller.extend({
 	subscription_id: '',
 	subscriptionsReady: false,
 	originalSize: '',
+	subscriptionPhoneNumber: '',
 	actions: {
 		setPhoneNumber(value) {
 		    this.set('phoneNumber', value);
 		},
 		getSubscriptionsList() {
 			this.set('subscriptions', this.get('store').query('subscription', { phone_number: this.get('phoneNumber') }));
+			this.set("subscriptionPhoneNumber", this.get("phoneNumber"));
 			this.set("showSubscriptionsList", true);
 		},
 		showViewDialog(trip_id, trip_name) {
@@ -52,46 +54,11 @@ export default Ember.Controller.extend({
 		self = this;
 		var newSubscriptionsArray = [];
 
-
 		this.get("subscriptions").forEach(function(subscription) {
 			if(subscriptionToBeDeleted.id != subscription.id) {
 				newSubscriptionsArray.push(subscription);
 			}
 			self.set("subscriptions", newSubscriptionsArray);
-			self.set("subscriptionsReady", false);
-			self.set("subscriptionsReady", true);
 		});
 	},
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
