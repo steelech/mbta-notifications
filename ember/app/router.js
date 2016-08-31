@@ -17,7 +17,7 @@ Router.map(function() {
   });
   this.route('about');
   this.route('help');
-  this.route('home');
+  this.route('home', { path: '/' });
   this.route('notifications');
 });
 

@@ -5,6 +5,6 @@ namespace :mbta do
 		ActiveRecord::Base.connection.execute("DELETE from 'routes'")
 		ActiveRecord::Base.connection.execute("DELETE from 'trips'")
 		ActiveRecord::Base.connection.execute("DELETE from 'stops'")
-		MbtaService.delay.get_schedule
+		MbtaService.get_schedule
 	end
 end
