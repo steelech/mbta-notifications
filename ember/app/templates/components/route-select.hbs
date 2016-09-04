@@ -6,11 +6,7 @@
 		</div>
 	</div>
 	<div class="direction-selector {{dropdownClass}}">
-		{{#direction-selector disabled=disabled as |direction|}}
-			<div class="get-route-button">
-
-			        <button class={{buttonClass}} disabled={{disabled}} {{action "setDirection" direction}}>Go!</button>
-			</div>
+		{{#direction-selector disabled=disabled setDirection="setDirection" as |direction|}}
 		{{/direction-selector}}
 	</div>
 	<div class="clearfix"></div>

@@ -17,7 +17,7 @@ export default Ember.Route.extend({
                         }
                         this.controllerFor('routes').set('routeId', id);
                         
-
+                        console.log("changeRoute");
         	        this.transitionTo("routes.route.trips", id, {queryParams: { direction: direction }} );
         	}
         	

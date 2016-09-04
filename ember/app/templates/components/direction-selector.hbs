@@ -1,8 +1,11 @@
-{{ember-selectize
-	placeholder="Direction"
-	create=false
-	content=contents
-	disabled=disabled
-	value=value
-}}
-{{yield value}}
+<div class="myclass">
+	{{ember-selectize
+		placeholder="Direction"
+		create=false
+		content=contents
+		disabled=disabled
+		value=value
+	}}
+	<div class="btn btn-primary" {{action "setDirection" value}}>Go</div>
+</div>
+
