@@ -7,7 +7,6 @@ export default Ember.Component.extend({
 	overListElement: false,
 	buttonClasses: "get-route-button",
 	buttonClass: "hidden",
-	// buttonClass: "get-route-button",
 	disabled: false,
 	direction: '',
 	route_name: '',

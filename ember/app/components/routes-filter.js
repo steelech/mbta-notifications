@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	classNames: ['routes-filter'],
 	value: '',
+	flashMessages: Ember.inject.service(),
 
 	init() {
 		this._super(...arguments);

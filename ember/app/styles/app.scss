@@ -64,7 +64,7 @@ li {
 }
 
 .trip-select {
-	width: 450px;
+	
 }
 
 .trip-select:hover {
@@ -72,11 +72,11 @@ li {
 }
 
 .trip-select-button {
-	padding-left: 225px;
 }
 
 .trip-schedule {
 	display:inline-flex;
+	width: 100%;
 }
 
 .stop-name {
@@ -86,6 +86,7 @@ li {
 
 .stop-time {
 	width: 100%;
+	padding-left: 160px;
 }
 
 .ember-modal-dialog {
@@ -138,15 +139,15 @@ li {
 
 .trips-input {
 	width: 170px;
-	margin-left: 147px;
 }
 
 .trip-location {
-	margin-left: 155px;
+	padding-top: 5px;
+	margin-right: 10px;
 }
 
 .trips-header {
-	margin-left: 193px;
+	text-align: center;
 }
 
 .stop {
@@ -155,10 +156,12 @@ li {
 }
 
 .trip-name {
+	width: 100%;
 }
 
 .other-container {
 	display: inline-flex;
+	width: 100%;
 }
 
 .btn-primary {
@@ -201,7 +204,7 @@ li {
 	
 }
 .stop-name-header {
-	padding-left: 60px;
+	text-align: center;
 	padding-top: 50px;
 }
 
@@ -303,7 +306,7 @@ li {
 .fa-train {
 	color: lightgrey;
 	&:hover {
-		color: darkgrey;
+		color: lightgrey;
 	}
 }
 
@@ -344,6 +347,15 @@ li {
 	}
 }
 
+.subscription-buttons {
+	.fa-train {
+		color: lightgrey;
+		&:hover {
+			color: darkgrey;
+		}
+	}
+}
+
 .no-subscriptions {
 	text-align: center;
 	margin-top: 5%;
@@ -380,6 +392,17 @@ li {
 	width: 100%;
 }
 
+.trip-schedule-container {
+	padding-left: 130px;
+}
+
+.trips-filter-container {
+	display: inline-flex;
+}
+
+.fa-hand-stop-o {
+	color: lightgrey;
+}
 
 
 

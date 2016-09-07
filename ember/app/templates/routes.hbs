@@ -5,6 +5,10 @@
     {{#routes-filter setDirection="setDirection"
             filter=(action 'filterByRoute')
             as |routes|}}
+
+            {{#each flashMessages.queue as |flash|}}
+                {{flash-message flash=flash}}
+            {{/each}}
             <div class="col-md-12 route-schedule">
                     <ul class="list-group">
                                     {{#if routes}}
