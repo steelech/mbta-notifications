@@ -2,14 +2,14 @@
     <div class="routes-header">
         <h1> Pick a route </h1>
     </div>
-    {{#routes-filter
+    {{#routes-filter setDirection="setDirection"
             filter=(action 'filterByRoute')
             as |routes|}}
             <div class="col-md-12 route-schedule">
                     <ul class="list-group">
                                     {{#if routes}}
                                     {{#each routes as |route|}}
-                                            {{#route-select setDirection="changeRoute" value1=route.route_name value2=route.trips.length id=route.id}}
+                                            {{#route-select selectRoute="displayRoute" value1=route.route_name value2=route.trips.length id=route.id}}
                                             {{/route-select}}
                                     {{/each}}
                                 {{else}}

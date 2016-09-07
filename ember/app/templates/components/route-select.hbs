@@ -1,14 +1,11 @@
 <div class="list-group-item route-selector" onmouseover={{action "over"}} onmouseout={{action "off"}} onclick={{action "setRoute" value1}}>
 	<div class="route-info">
 		<div>{{value1}}</div>
-		<div class={{directionClass}}>
-			<div>{{value2}} trips total</div>      
-		</div>
 	</div>
-	<div class="direction-selector {{dropdownClass}}">
-		{{#direction-selector disabled=disabled setDirection="setDirection" as |direction|}}
-		{{/direction-selector}}
+	<div class={{buttonClass}}>
+		<div class="btn btn-primary" {{action "selectRoute" value}}>Go</div>
 	</div>
+	{{!-- <div class={{buttonClass}} {{action "selectRoute" value}}>Go</div> --}}
 	<div class="clearfix"></div>
 </div>
 

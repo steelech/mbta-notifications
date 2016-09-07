@@ -22,10 +22,8 @@ li:hover {
 }
 
 .get-route-button  {
-	/*float: right;*/
-        height: 37px;
-        display: inline-block;
-        width: 110px;
+	float: right;
+
 }
 
 .direction-selector {
@@ -41,25 +39,23 @@ li {
 
 .route-selector:hover {
 	background-color: #D3D3D3;
-	padding-bottom: 20px;
-	font-size: 20px;
 }
 
 .route-selector {
 	padding-right: 5%;
+	display: inline-flex;
+	width: 100%;
 }
 
 .route-info {
-	display: inline-block;
+	width: 100%;
 }
 
 .route-selector:hover .directions {
-	padding-top: 20px;
 	font-size: 10px;
 }
 
 .routes-filter {
-	padding-bottom: 20px;
 }
 
 .trips {
@@ -131,8 +127,7 @@ li {
 
 .routes-input {
 	width: 50%;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 15%;
 }
 
 .routes-header {
@@ -378,6 +373,11 @@ li {
 
 .route-schedule {
 	margin-bottom: 100px;
+}
+
+.routes-filter-class {
+	display: inline-flex;
+	width: 100%;
 }
 
 

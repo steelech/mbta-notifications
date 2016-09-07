@@ -9,6 +9,6 @@ export default Ember.Controller.extend({
 			} else {
 				return this.get('store').findAll('route');
 			}
-		}
+		},
 	} 
 });

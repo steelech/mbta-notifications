@@ -1,13 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+        direction: '',
 	model(params) {
 		return this.store.findAll('route');
 
 	},
         actions: {
-        	changeRoute(route_name, direction, id) {
-                        if(direction == "Outbound")
+                displayRoute(route_name, id) {
+                        var direction = 0;
+                        if(this.get("direction") == "Outbound")
                         {
                                 direction = 0;
                         }
@@ -16,10 +18,11 @@ export default Ember.Route.extend({
                                 direction = 1;
                         }
                         this.controllerFor('routes').set('routeId', id);
-                        
-                        console.log("changeRoute");
-        	        this.transitionTo("routes.route.trips", id, {queryParams: { direction: direction }} );
-        	}
+                        this.transitionTo("routes.route.trips", id, {queryParams: { direction: direction }} );
+                }, 
+                setDirection(params) {
+                        this.set("direction", params);
+                }
         	
         }
 });
