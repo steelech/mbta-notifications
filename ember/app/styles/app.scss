@@ -41,6 +41,12 @@ li {
 
 .route-selector:hover {
 	background-color: #D3D3D3;
+	padding-bottom: 20px;
+	font-size: 20px;
+}
+
+.route-selector {
+	padding-right: 5%;
 }
 
 .route-info {
@@ -48,6 +54,8 @@ li {
 }
 
 .route-selector:hover .directions {
+	padding-top: 20px;
+	font-size: 10px;
 }
 
 .routes-filter {
@@ -361,6 +369,15 @@ li {
 }
 
 .selectize-control {
+}
+
+.selectize-input {
+	width: 90px;
+	font-size: 12px;
+}
+
+.route-schedule {
+	margin-bottom: 100px;
 }
 
 

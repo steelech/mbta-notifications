@@ -8,25 +8,25 @@ export default Ember.Component.extend({
 	buttonClasses: "btn btn-primary get-route-button",
 	dropdownClasses: "",
 	directionClasses: "directions",
-	// buttonClass: "hidden",
-	// dropdownClass: "hidden",
+	buttonClass: "hidden",
+	dropdownClass: "hidden",
 	directionClass: "hidden",
-	buttonClass: "btn btn-primary get-route-button",
-	dropdownClass: "",
+	// buttonClass: "btn btn-primary get-route-button",
+	// dropdownClass: "",
 	// directionClass: "directions",
 	disabled: false,
 	direction: '',
 	route_name: '',
 	actions: {
 		over: function() {
-			// this.set("buttonClass", this.get("buttonClasses"));
-			// this.set("dropdownClass", this.get("dropdownClasses"));
-			// this.set("directionClass", this.get("directionClasses"));
+			this.set("buttonClass", this.get("buttonClasses"));
+			this.set("dropdownClass", this.get("dropdownClasses"));
+			this.set("directionClass", this.get("directionClasses"));
 		},
 		off: function() {
-			// this.set("buttonClass", "hidden");
-			// this.set("dropdownClass", "hidden");
-			// this.set("directionClass", "hidden");
+			this.set("buttonClass", "hidden");
+			this.set("dropdownClass", "hidden");
+			this.set("directionClass", "hidden");
 		},
 		setDirection: function(param) {
 			// console.log("setting direction");
