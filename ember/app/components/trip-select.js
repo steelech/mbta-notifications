@@ -15,7 +15,7 @@ export default Ember.Component.extend({
 		off: function() {
 			this.set("iconClass", "hidden");
 		},
-		setTrip: function(param) {
+		setTrip: function() {
 			this.sendAction("setTrip", this.get('trip_name'), this.get('id'));
 		}
 	}

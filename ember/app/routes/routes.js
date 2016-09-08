@@ -2,14 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
         direction: '',
-	model(params) {
+	model() {
 		return this.store.findAll('route');
 
 	},
         actions: {
                 displayRoute(route_name, id) {
                         var direction = 0;
-                        if(this.get("direction") == "Outbound")
+                        if(this.get("direction") === "Outbound")
                         {
                                 direction = 0;
                         }

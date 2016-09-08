@@ -1,10 +1,8 @@
-import Model from 'ember-data/model';
-// import attr from 'ember-data/attr';
-// import { belongsTo, hasMany } from 'ember-data/relationships';
+import DS from 'ember-data';
 
-export default Model.extend({
+export default DS.Model.extend({
 	stop_id: DS.attr(),
 	stop_name: DS.attr(),
-        stop_sequence: DS.attr(),
-        stop_time: DS.attr()
+    stop_sequence: DS.attr(),
+    stop_time: DS.attr()
 });

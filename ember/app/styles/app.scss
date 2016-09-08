@@ -198,6 +198,9 @@ li {
 
 .subscribe {
 	margin-right: 5px;
+	.fa-mobile-phone {
+		color: #b193c3;
+	}
 }
 
 .btn-default.subscribe-container {
@@ -350,14 +353,15 @@ li {
 .subscription-delete-buttons {
 	display: inline-flex;
 	margin-top: 15%;
+	.fa-hand-stop-o {
+		color: #b193c3;
+
+	}
 }
 
 .subscription-delete-confirmation-button {
 	.fa-trash {
 		color: #b193c3;
-		&:hover {
-			color: #6e3590;
-		}
 	}
 }
 
@@ -469,7 +473,16 @@ li {
 	display: inline-flex;
 	margin-top: 90px;
 	margin-left: 40px;
+
+	.fa-hand-stop-o {
+		color: #b193c3;
+	}
+
+	.fa-mobile {
+		color: #b193c3;
+	}
 }
+
 
 
 

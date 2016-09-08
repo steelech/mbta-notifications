@@ -27,7 +27,7 @@ export default Ember.Controller.extend({
 		showViewDialog(trip_id, trip_name) {
 			this.set("viewDialog", true);
 			this.set("trip_name", trip_name);
-			this.set("stops", this.get("store").query("stop", { trip_id: this.get(trip_id) }))
+			this.set("stops", this.get("store").query("stop", { trip_id: this.get(trip_id) }));
 		},
 		showDeleteDialog(trip_id, trip_name, subscription_id) {
 			this.set("deleteDialog", true);
@@ -51,11 +51,11 @@ export default Ember.Controller.extend({
 		return this.get("store").find("subscription", this.get("subscription_id"));
 	},
 	removeSubscriptionFromArray: function(subscriptionToBeDeleted) {
-		self = this;
+		var self = this;
 		var newSubscriptionsArray = [];
 
 		this.get("subscriptions").forEach(function(subscription) {
-			if(subscriptionToBeDeleted.id != subscription.id) {
+			if(subscriptionToBeDeleted.id !== subscription.id) {
 				newSubscriptionsArray.push(subscription);
 			}
 			self.set("subscriptions", newSubscriptionsArray);

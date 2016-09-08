@@ -13,9 +13,9 @@ export default Ember.Controller.extend({
         phoneNumber: '',
         ajax: Ember.inject.service(),
         actions: {
-                filterByTrip(input, direction) {
+                filterByTrip(input) {
 
-                    if(input == "")
+                    if(input === "")
                     {
                         return this.get('store').query("trip", { direction: this.get('direction'), route: this.get('route')});
                     }
@@ -37,7 +37,7 @@ export default Ember.Controller.extend({
                     this.set("showModalDialog", true);
                 },
                 subscribe() {
-                    var response = this.get('ajax').request('http://localhost:3000/subscriptions', {
+                    this.get('ajax').request('http://localhost:3000/subscriptions', {
                         method: 'POST',
                         data: {
                             direction: this.get('direction'),
@@ -54,8 +54,5 @@ export default Ember.Controller.extend({
                     this.set('phoneNumber', value);
 
                 },
-                // cancel() {
-                //     this.set("showModalDialog", false);
-                // }   
         }
 });
