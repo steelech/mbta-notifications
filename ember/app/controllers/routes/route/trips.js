@@ -53,6 +53,9 @@ export default Ember.Controller.extend({
                     console.log("setting phone number", value);
                     this.set('phoneNumber', value);
 
-                }   
+                },
+                // cancel() {
+                //     this.set("showModalDialog", false);
+                // }   
         }
 });

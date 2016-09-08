@@ -20,7 +20,7 @@
 
 {{#if viewDialog}}
 	{{#modal-dialog translucentOverlay=true close="closeViewDialog"}}
-		<h1 class="subscription-trip-name">{{trip_name}}</h1>
+		<h1 class="subscription-modal-trip-name">{{trip_name}}</h1>
 		{{#subscription-schedule stops=stops getStops="getStops"}}
 		{{/subscription-schedule}}
 	{{/modal-dialog}}

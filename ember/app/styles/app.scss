@@ -115,7 +115,7 @@ li {
 
 .subscribe-text {
 	text-align: center;
-	padding-bottom: 50px;
+	padding-bottom: 80px;
 }
 
 .subscribe-modal-button {
@@ -201,7 +201,7 @@ li {
 }
 
 .btn-default.subscribe-container {
-	background-color: #a94ca9;
+
 }
 
 .no-trip-selected {
@@ -296,9 +296,10 @@ li {
 	
 }
 
-.subscription-trip-name {
+.subscription-modal-trip-name {
 	width: 100%;
-	
+	font-size: 25px;
+	text-align: center;
 }
 
 .subscription-buttons {
@@ -323,9 +324,9 @@ li {
 }
 
 .fa-trash {
-	color: lightgrey;
+	color: #b193c3;
 	&:hover {
-		color: darkgrey;
+		color: #6e3590;
 	}
 }
 
@@ -334,6 +335,7 @@ li {
 }
 
 .subscription-trip-name {
+	width: 100%;
 }
 
 .subscription-delete {
@@ -352,18 +354,18 @@ li {
 
 .subscription-delete-confirmation-button {
 	.fa-trash {
-		color: lightgrey;
+		color: #b193c3;
 		&:hover {
-			color: lightgrey;
+			color: #6e3590;
 		}
 	}
 }
 
 .subscription-buttons {
 	.fa-train {
-		color: lightgrey;
+		color: #b193c3;
 		&:hover {
-			color: darkgrey;
+			color: #6e3590;
 		}
 	}
 }
@@ -423,6 +425,50 @@ li {
 			color: #6e3590;
 		}
 	}
+}
+
+.container {
+	padding-top: 30px;
+}
+
+.navbar-inverse .navbar-nav > li > a { 
+	color: purple;
+}
+
+.nav-link {
+	&:hover {
+	}
+}
+
+
+.header-icon {
+	font-size: 36px;
+	.fa-train {
+		color: #b193c3;
+	}
+	margin-right: 30px;
+}
+
+.navbar-left {
+	
+}
+
+.navbar-header {
+	margin-right: 30px;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+.subscribe-button-container {
+	padding-left: 40%;
+}
+
+.subscribe-modal-buttons {
+	display: inline-flex;
+	margin-top: 90px;
+	margin-left: 40px;
 }
 
 

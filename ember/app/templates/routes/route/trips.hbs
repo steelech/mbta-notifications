@@ -3,11 +3,19 @@
 		<div class="modal-dialog-container">
 			<div class="subscribe-text">Subscribe to notifications for this trip</div>
 			{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
-			<div class="subscribe-modal-button">
-				<a class="btn btn-default" {{action "subscribe"}}>Subscribe</a>
+			<div class="subscribe-modal-buttons">
+				<div class="subscribe-cancel-button">
+					<div class="btn btn-default" {{action "closeModalDialog"}}>
+						Cancel {{fa-icon "hand-stop-o"}}
+					</div>
+				</div>
+				<div class="subscribe-confirm-button">
+					<div class="btn btn-default" {{action "subscribe"}}>
+						Subscribe {{fa-icon "mobile"}}
+					</div>
+				</div>
 			</div>
 		</div>
-		
 	{{/modal-dialog}}
 {{/if}}
 <div class="row trip">
@@ -28,6 +36,3 @@
 	</div>
 	{{trip-schedule stops=stops trip_name=trip_name showSchedule=showSchedule openModalDialog="openModalDialog"}}
 </div>
-
-
-

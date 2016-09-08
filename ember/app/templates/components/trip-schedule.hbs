@@ -1,14 +1,10 @@
-
-
 <div class="trip-schedule-container">
 	<div class="col-md-6">
 		{{#if showSchedule}}
-			{{!-- <h1 class="trip-name-header">{{trip_name}}</h1> --}}
 			<div class="jumbotron">
 				<div class="trip-name-header">
 					<h1>{{trip_name}}</h1>
 				</div>
-				{{!-- <h1 class="trip-name-header">{{trip_name}}</h1> --}}
 				{{#each stops as |stop|}}
 					<div class="list-group-item stop">
 						<div class="trip-schedule">
@@ -18,20 +14,14 @@
 					</div>
 				{{/each}}
 			</div>
-			{{!-- {{#each stops as |stop|}}
-				<div class="list-group-item stop">
-					<div class="trip-schedule">
-						<div class="stop-name">{{stop.stop_name}}</div>
-						<div class="stop-time pull-right">{{stop.stop_time}}</div>
+			<div class="subscribe-button-container">
+				<a class="btn btn-default tooltipped"{{action 'openModalDialog'}}>
+					<div class="subscribe-button">
+						<div class="subscribe">Subscribe</div>
+						{{fa-icon "mobile-phone"}}
 					</div>
-				</div>
-			{{/each}} --}}
-			<a class="btn btn-default tooltipped subscribe-container"{{action 'openModalDialog'}}>
-				<div class="subscribe-button">
-					<div class="subscribe">Subscribe</div>
-					{{fa-icon "mobile-phone"}}
-				</div>
-			</a>
+				</a>
+			</div>
 		{{else}}
 			<div class="stop-name-header">
 				<h1>No trip selected</h1>
