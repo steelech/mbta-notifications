@@ -4,9 +4,16 @@
 			<b>{{trip_name}}</b>
 		</div>
 		<div class="trip-select-button">
-			<a class={{buttonClass}} {{action "setTrip" id}}>
-				{{fa-icon "train"}}
-			</a>
+			<div class={{iconClass}} {{action "setTrip" id}}>
+				{{fa-icon "clock-o"}}
+			</div>
+
+
 		</div>
 	</div>
 </div>
+
+
+{{!-- <div class={{iconClass}} onclick={{action "selectRoute" value}}>
+	{{fa-icon "train"}}
+</div> --}}

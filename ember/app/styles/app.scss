@@ -72,6 +72,12 @@ li {
 }
 
 .trip-select-button {
+	.fa-clock-o {
+		color: #ad68ad;
+		&:hover {
+			color: #7b3e7b;
+		}
+	}
 }
 
 .trip-schedule {
@@ -408,6 +414,15 @@ li {
 
 .fa-hand-stop-o {
 	color: lightgrey;
+}
+
+.route-selector {
+	.fa-train {
+		color: #b193c3;
+		&:hover {
+			color: #6e3590;
+		}
+	}
 }
 
 
